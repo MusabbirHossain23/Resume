@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Musabbir Hossain — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #2563eb;
+--primary-dark: #1d4ed8;
+--secondary: #0f172a;
+--accent: #06b6d4;
+--text: #1e293b;
+--text-muted: #64748b;
+--text-light: #94a3b8;
+--bg: #ffffff;
+--bg-alt: #f8fafc;
+--bg-card: #ffffff;
+--border: #e2e8f0;
+--success: #10b981;
+--sidebar: #1e293b;
+--sidebar-text: #f1f5f9;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+background: var(--bg-alt);
+color: var(--text);
+line-height: 1.6;
+font-size: 14px;
+}
+
+/* Page Container */
+.page-container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 20px;
+}
+
+/* Main CV Container */
+.cv-container {
+background: var(--bg);
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+border-radius: 12px;
+overflow: hidden;
+}
+
+/* Header Section */
+.cv-header {
+background: linear-gradient(135deg, var(--sidebar) 0%, #334155 100%);
+color: var(--sidebar-text);
+padding: 50px 60px;
+position: relative;
+overflow: hidden;
+}
+
+.cv-header::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -10%;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+border-radius: 50%;
+}
+
+.cv-header::after {
+content: '';
+position: absolute;
+bottom: -30%;
+left: 20%;
+width: 300px;
+height: 300px;
+background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+border-radius: 50%;
+}
+
+.header-content {
+position: relative;
+z-index: 1;
+display: flex;
+gap: 40px;
+align-items: center;
+}
+
+.profile-section {
+flex-shrink: 0;
+}
+
+.avatar-container {
+width: 140px;
+height: 160px;
+border-radius: 12px;
+background: linear-gradient(135deg, var(--primary), var(--accent));
+padding: 3px;
+box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+}
+
+.avatar-placeholder {
+width: 100%;
+height: 100%;
+background: var(--sidebar);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 48px;
+font-weight: 700;
+color: var(--primary);
+}
+
+.name-section {
+flex: 1;
+}
+
+.name-section h1 {
+font-size: 36px;
+font-weight: 800;
+letter-spacing: -0.5px;
+margin-bottom: 6px;
+color: #fff;
+}
+
+.name-section .title {
+font-size: 16px;
+color: var(--accent);
+font-weight: 500;
+margin-bottom: 20px;
+letter-spacing: 0.5px;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px 30px;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 13px;
+color: var(--sidebar-text);
+opacity: 0.9;
+}
+
+.contact-item .icon {
+width: 32px;
+height: 32px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 14px;
+flex-shrink: 0;
+}
+
+.contact-item a {
+color: var(--sidebar-text);
+text-decoration: none;
+transition: color 0.2s;
+}
+
+.contact-item a:hover {
+color: var(--accent);
+}
+
+/* Main Content */
+.cv-body {
+display: grid;
+grid-template-columns: 280px 1fr;
+}
+
+/* Sidebar */
+.cv-sidebar {
+background: var(--bg-alt);
+padding: 40px 30px;
+border-right: 1px solid var(--border);
+}
+
+.sidebar-section {
+margin-bottom: 35px;
+}
+
+.sidebar-section:last-child {
+margin-bottom: 0;
+}
+
+.section-title {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: var(--primary);
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.section-title::after {
+content: '';
+flex: 1;
+height: 1px;
+background: linear-gradient(to right, var(--primary), transparent);
+}
+
+/* Info List */
+.info-list {
+list-style: none;
+}
+
+.info-item {
+display: flex;
+justify-content: space-between;
+padding: 8px 0;
+border-bottom: 1px dashed var(--border);
+font-size: 13px;
+}
+
+.info-item:last-child {
+border-bottom: none;
+}
+
+.info-label {
+color: var(--text-muted);
+font-weight: 400;
+}
+
+.info-value {
+color: var(--text);
+font-weight: 500;
+text-align: right;
+}
+
+/* Skills */
+.skill-category {
+margin-bottom: 15px;
+}
+
+.skill-category:last-child {
+margin-bottom: 0;
+}
+
+.skill-label {
+font-size: 12px;
+font-weight: 600;
+color: var(--text);
+margin-bottom: 8px;
+}
+
+.skill-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+}
+
+.skill-tag {
+font-size: 11px;
+padding: 4px 10px;
+background: var(--bg);
+border: 1px solid var(--border);
+border-radius: 20px;
+color: var(--text-muted);
+font-weight: 500;
+transition: all 0.2s;
+}
+
+.skill-tag:hover {
+border-color: var(--primary);
+color: var(--primary);
+}
+
+/* Languages */
+.language-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.language-item:last-child {
+border-bottom: none;
+}
+
+.language-name {
+font-weight: 500;
+color: var(--text);
+}
+
+.language-level {
+font-size: 11px;
+padding: 3px 10px;
+background: var(--success);
+color: #fff;
+border-radius: 20px;
+font-weight: 500;
+}
+
+/* Main Content Area */
+.cv-main {
+padding: 40px 50px;
+}
+
+.main-section {
+margin-bottom: 40px;
+}
+
+.main-section:last-child {
+margin-bottom: 0;
+}
+
+/* Objective Box */
+.objective-box {
+background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+border: 1px solid rgba(37, 99, 235, 0.1);
+border-radius: 12px;
+padding: 25px;
+font-style: italic;
+color: var(--text-muted);
+line-height: 1.8;
+position: relative;
+}
+
+.objective-box::before {
+content: '"';
+position: absolute;
+top: 10px;
+left: 15px;
+font-size: 40px;
+color: var(--primary);
+opacity: 0.3;
+font-family: Georgia, serif;
+}
+
+/* Timeline */
+.timeline {
+position: relative;
+padding-left: 25px;
+}
+
+.timeline::before {
+content: '';
+position: absolute;
+left: 0;
+top: 5px;
+bottom: 5px;
+width: 2px;
+background: linear-gradient(to bottom, var(--primary), var(--accent));
+border-radius: 2px;
+}
+
+.timeline-item {
+position: relative;
+margin-bottom: 30px;
+padding-left: 25px;
+}
+
+.timeline-item:last-child {
+margin-bottom: 0;
+}
+
+.timeline-item::before {
+content: '';
+position: absolute;
+left: -29px;
+top: 6px;
+width: 12px;
+height: 12px;
+background: var(--bg);
+border: 2px solid var(--primary);
+border-radius: 50%;
+box-shadow: 0 0 0 4px var(--bg-alt);
+}
+
+.timeline-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 8px;
+gap: 15px;
+}
+
+.timeline-title {
+font-size: 16px;
+font-weight: 700;
+color: var(--text);
+}
+
+.timeline-institution {
+font-size: 14px;
+color: var(--primary);
+font-weight: 500;
+margin-top: 3px;
+}
+
+.timeline-date {
+font-size: 12px;
+color: var(--text-light);
+background: var(--bg-alt);
+padding: 4px 12px;
+border-radius: 20px;
+white-space: nowrap;
+font-weight: 500;
+}
+
+.timeline-details {
+font-size: 13px;
+color: var(--text-muted);
+margin-top: 8px;
+}
+
+.gpa-badge {
+display: inline-flex;
+align-items: center;
+gap: 5px;
+font-size: 12px;
+color: var(--success);
+font-weight: 600;
+margin-top: 8px;
+background: rgba(16, 185, 129, 0.1);
+padding: 4px 12px;
+border-radius: 20px;
+}
+
+/* Additional Section */
+.additional-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.info-card {
+background: var(--bg-alt);
+border-radius: 10px;
+padding: 20px;
+}
+
+.info-card-title {
+font-size: 12px;
+font-weight: 600;
+color: var(--text-muted);
+margin-bottom: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.info-card-content {
+font-size: 14px;
+color: var(--text);
+font-weight: 500;
+}
+
+.info-card-content .detail-row {
+display: flex;
+padding: 6px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.info-card-content .detail-row:last-child {
+border-bottom: none;
+}
+
+.detail-label {
+color: var(--text-muted);
+width: 100px;
+flex-shrink: 0;
+}
+
+.detail-value {
+color: var(--text);
+}
+
+/* Footer */
+.cv-footer {
+background: var(--bg-alt);
+padding: 20px 50px;
+text-align: center;
+border-top: 1px solid var(--border);
+}
+
+.footer-text {
+font-size: 12px;
+color: var(--text-light);
+}
+
+/* Print Styles */
+@media print {
+body {
+background: white;
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+
+.page-container {
+padding: 0;
+max-width: none;
+}
+
+.cv-container {
+box-shadow: none;
+border-radius: 0;
+}
+
+.cv-header {
+padding: 30px 40px;
+}
+
+.cv-sidebar {
+padding: 25px 20px;
+}
+
+.cv-main {
+padding: 30px 40px;
+}
+
+.timeline-item {
+page-break-inside: avoid;
+}
+
+.main-section {
+page-break-inside: avoid;
+}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.cv-header {
+padding: 30px 25px;
+}
+
+.header-content {
+flex-direction: column;
+text-align: center;
+gap: 25px;
+}
+
+.name-section h1 {
+font-size: 28px;
+}
+
+.contact-grid {
+grid-template-columns: 1fr;
+gap: 8px;
+}
+
+.contact-item {
+justify-content: center;
+}
+
+.cv-body {
+grid-template-columns: 1fr;
+}
+
+.cv-sidebar {
+border-right: none;
+border-bottom: 1px solid var(--border);
+}
+
+.cv-main {
+padding: 30px 25px;
+}
+
+.timeline-header {
+flex-direction: column;
+gap: 8px;
+}
+
+.additional-grid {
+grid-template-columns: 1fr;
+}
+
+.cv-footer {
+padding: 20px 25px;
+}
+}
+
+/* Action Buttons */
+.action-buttons {
+display: flex;
+gap: 15px;
+justify-content: center;
+margin: 30px 0;
+flex-wrap: wrap;
+}
+
+.action-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 12px 24px;
+font-size: 14px;
+font-weight: 600;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.2s;
+text-decoration: none;
+}
+
+.action-btn.primary {
+background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+color: white;
+}
+
+.action-btn.primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+}
+
+.action-btn.secondary {
+background: var(--bg);
+color: var(--text);
+border: 2px solid var(--border);
+}
+
+.action-btn.secondary:hover {
+border-color: var(--primary);
+color: var(--primary);
+}
+</style>
+</head>
+<body>
+
+<div class="page-container">
+
+<!-- Action Buttons -->
+<div class="action-buttons">
+<button class="action-btn primary" onclick="window.print()">
+📄 Download as PDF
+</button>
+<button class="action-btn secondary" onclick="window.location.reload()">
+🔄 Refresh
+</button>
+</div>
+
+<!-- CV Container -->
+<div class="cv-container">
+
+<!-- Header -->
+<header class="cv-header">
+<div class="header-content">
+<div class="profile-section">
+<div class="avatar-container">
+<div class="avatar-placeholder">MH</div>
+</div>
+</div>
+<div class="name-section">
+<h1>MD. MUSABBIR HOSSAIN</h1>
+<div class="title">Computer Science & Engineering Graduate</div>
+<div class="contact-grid">
+<div class="contact-item">
+<span class="icon">✉</span>
+<a href="mailto:murad.bnmpc2351@gmail.com">murad.bnmpc2351@gmail.com</a>
+</div>
+<div class="contact-item">
+<span class="icon">☎</span>
+<span>+880 1825-994419</span>
+</div>
+<div class="contact-item">
+<span class="icon">📍</span>
+<span>Panthapath, Green Road, House-158</span>
+</div>
+<div class="contact-item">
+<span class="icon">🔗</span>
+<a href="https://github.com/MusabbirHossain23" target="_blank">github.com/MusabbirHossain23</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<!-- Body -->
+<div class="cv-body">
+
+<!-- Sidebar -->
+<aside class="cv-sidebar">
+
+<!-- Personal Details -->
+<div class="sidebar-section">
+<h3 class="section-title">Personal Details</h3>
+<ul class="info-list">
+<li class="info-item">
+<span class="info-label">Date of Birth</span>
+<span class="info-value">19 Nov, 2000</span>
+</li>
+<li class="info-item">
+<span class="info-label">Nationality</span>
+<span class="info-value">Bangladeshi</span>
+</li>
+<li class="info-item">
+<span class="info-label">Gender</span>
+<span class="info-value">Male</span>
+</li>
+<li class="info-item">
+<span class="info-label">Blood Group</span>
+<span class="info-value">A+</span>
+</li>
+<li class="info-item">
+<span class="info-label">Marital Status</span>
+<span class="info-value">Unmarried</span>
+</li>
+<li class="info-item">
+<span class="info-label">NID</span>
+<span class="info-value">826 448 6500</span>
+</li>
+</ul>
+</div>
+
+<!-- Languages -->
+<div class="sidebar-section">
+<h3 class="section-title">Languages</h3>
+<div class="language-item">
+<span class="language-name">বাংলা</span>
+<span class="language-level">Native</span>
+</div>
+<div class="language-item">
+<span class="language-name">English</span>
+<span class="language-level">Fluent</span>
+</div>
+</div>
+
+<!-- Skills -->
+<div class="sidebar-section">
+<h3 class="section-title">Technical Skills</h3>
+<div class="skill-category">
+<div class="skill-label">Programming</div>
+<div class="skill-tags">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">C</span>
+<span class="skill-tag">C++</span>
+<span class="skill-tag">Java</span>
+</div>
+</div>
+<div class="skill-category">
+<div class="skill-label">Machine Learning</div>
+<div class="skill-tags">
+<span class="skill-tag">TensorFlow</span>
+<span class="skill-tag">Keras</span>
+<span class="skill-tag">OpenCV</span>
+</div>
+</div>
+<div class="skill-category">
+<div class="skill-label">Web Development</div>
+<div class="skill-tags">
+<span class="skill-tag">Django</span>
+<span class="skill-tag">HTML5</span>
+<span class="skill-tag">CSS3</span>
+<span class="skill-tag">JavaScript</span>
+</div>
+</div>
+<div class="skill-category">
+<div class="skill-label">Databases</div>
+<div class="skill-tags">
+<span class="skill-tag">MySQL</span>
+</div>
+</div>
+<div class="skill-category">
+<div class="skill-label">Tools</div>
+<div class="skill-tags">
+<span class="skill-tag">Git</span>
+<span class="skill-tag">VS Code</span>
+<span class="skill-tag">LaTeX</span>
+</div>
+</div>
+</div>
+
+<!-- Parents Info -->
+<div class="sidebar-section">
+<h3 class="section-title">Parents</h3>
+<ul class="info-list">
+<li class="info-item">
+<span class="info-label">Father</span>
+<span class="info-value">Md. Bipul Mia</span>
+</li>
+<li class="info-item">
+<span class="info-label">Mother</span>
+<span class="info-value">Mst. Fatema Begum</span>
+</li>
+</ul>
+</div>
+
+<!-- Permanent Address -->
+<div class="sidebar-section">
+<h3 class="section-title">Permanent Address</h3>
+<div style="font-size: 13px; color: var(--text); line-height: 1.8;">
+Village: Mukundogati<br>
+Post: Sohagpur<br>
+Upazila: Belkuchi<br>
+District: Sirajganj<br>
+Division: Rajshahi
+</div>
+</div>
+
+</aside>
+
+<!-- Main Content -->
+<main class="cv-main">
+
+<!-- Objective -->
+<section class="main-section">
+<h3 class="section-title">Career Objective</h3>
+<div class="objective-box">
+Passionate about establishing justice and making a positive impact in society. Dedicated to leveraging technology for social good, with a strong commitment to continuous learning and professional growth. Seeking opportunities to contribute meaningfully to innovative projects while upholding ethical values and serving the community.
+</div>
+</section>
+
+<!-- Education -->
+<section class="main-section">
+<h3 class="section-title">Education</h3>
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">B.Sc. in Computer Science & Engineering</div>
+<div class="timeline-institution">Gopalganj Science and Technology University (GSTU)</div>
+</div>
+<span class="timeline-date">2018 — 2024</span>
+</div>
+<div class="timeline-details">
+Thesis: Real-Time Human Action Recognition in Video Surveillance Using Machine Learning (Accepted for Journal Publication)
+</div>
+<div class="gpa-badge">🏆 CGPA: 3.25 / 4.00 | Technical Scholarship Recipient</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Higher Secondary Certificate (HSC)</div>
+<div class="timeline-institution">Birshreshtha Noor Mohammad Public College (BNMPC)</div>
+</div>
+<span class="timeline-date">2016 — 2018</span>
+</div>
+<div class="gpa-badge">🏆 GPA: 4.33 / 5.00</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Secondary School Certificate (SSC)</div>
+<div class="timeline-institution">Sohagpur S.K. Pilot Model High School</div>
+</div>
+<span class="timeline-date">2014 — 2016</span>
+</div>
+<div class="gpa-badge">🏆 GPA: 5.00 / 5.00 (GPA-5 Achiever)</div>
+</div>
+
+</div>
+</section>
+
+<!-- Research & Projects -->
+<section class="main-section">
+<h3 class="section-title">Research & Projects</h3>
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Human Action Recognition System</div>
+<div class="timeline-institution">Undergraduate Thesis (Published)</div>
+</div>
+<span class="timeline-date">2023 — 2024</span>
+</div>
+<div class="timeline-details">
+Developed real-time human action recognition system using Machine Learning and Computer Vision techniques for intelligent surveillance applications.
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Crop Disease Detection (Ongoing)</div>
+<div class="timeline-institution">AI-based Mobile Application</div>
+</div>
+<span class="timeline-date">2024 — Present</span>
+</div>
+<div class="timeline-details">
+Building CNN-based mobile application for early detection of crop diseases from leaf images, aimed at supporting farmers in rural Bangladesh.
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Online School Platform</div>
+<div class="timeline-institution">E-learning Web Application</div>
+</div>
+<span class="timeline-date">2022</span>
+</div>
+<div class="timeline-details">
+Django-based e-learning platform with course management, progress tracking, and user authentication system.
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Certifications -->
+<section class="main-section">
+<h3 class="section-title">Certifications & Achievements</h3>
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">CSE Fundamentals with Phitron</div>
+<div class="timeline-institution">Phitron.io</div>
+</div>
+<span class="timeline-date">Fall 2022</span>
+</div>
+<div class="gpa-badge">🏆 CGPA: 4.00 / 4.00</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Data Analysis with Python</div>
+<div class="timeline-institution">BSMRSTU under EDGE Project</div>
+</div>
+<span class="timeline-date">May — Sep 2024</span>
+</div>
+<div class="timeline-details">80 hours comprehensive training program</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-header">
+<div>
+<div class="timeline-title">Technical Scholarship</div>
+<div class="timeline-institution">GSTU</div>
+</div>
+<span class="timeline-date">2019 — 2024</span>
+</div>
+<div class="timeline-details">Full 4-year university stipend for outstanding academic performance</div>
+</div>
+
+</div>
+</section>
+
+<!-- References -->
+<section class="main-section">
+<h3 class="section-title">References</h3>
+<div class="additional-grid">
+<div class="info-card">
+<div class="info-card-title">Academic Supervisor</div>
+<div class="info-card-content">
+<strong style="color: var(--text);">Dr. Mrinal Kanti Baowaly</strong><br>
+<span style="color: var(--text-muted); font-size: 12px;">Associate Professor, Dept. of CSE, GSTU</span><br>
+<span style="color: var(--primary); font-size: 12px;">✉ baowaly@gmail.com</span>
+</div>
+</div>
+<div class="info-card">
+<div class="info-card-title">Thesis Supervisor</div>
+<div class="info-card-content">
+<strong style="color: var(--text);">Abu Bakar Muhammad Abdullah</strong><br>
+<span style="color: var(--text-muted); font-size: 12px;">Assistant Professor, Dept. of CSE, GSTU</span><br>
+<span style="color: var(--primary); font-size: 12px;">✉ abdullahcse09@gmail.com</span>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+</div>
+
+<!-- Footer -->
+<footer class="cv-footer">
+<p class="footer-text">
+References available upon request • Last updated: January 2025
+</p>
+</footer>
+
+</div>
+
+</div>
+
+</body>
+</html>
